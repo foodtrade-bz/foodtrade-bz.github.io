@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foodtrade</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <base href="/">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link href="/assets/styles/vendors.css" rel="stylesheet">
+    <link href="/assets/styles/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="header__row"><a class="header__logo" href="/"><img class="header__logo-img" src="assets/images/logo.png" width="250" height="28" alt="" role="presentation"/></a>
+          <p class="header__phone">
+            <button class="header__toggle-menu" data-toggle="collapse" data-target="#topNav">
+            </button><a class="header__phone-link" href="tel:+88002548734"><span>8 800</span><span class="header__phone-color">254-87-34</span></a>
+          </p>
+          <button class="header__callback" data-toggle="modal" data-target="#callbackFormModal"><span>Заказать звонок</span>
+          </button>
+        </div>
+      </div>
+      <div class="nav collapse" id="topNav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link toscroll" href="nuts.html">Орехи</a>
+          </li>
+          <li class="nav__item"><a class="nav__link toscroll" href="dried-fruits.html">Сухофрукты</a>
+          </li>
+          <li class="nav__item"><a class="nav__link toscroll" href="#terms">Оплата и доставка</a>
+          </li>
+          <li class="nav__item"><a class="nav__link toscroll" href="#about">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <div class="top-banner">
+        <div class="top-banner__container">
+          <div class="top-banner__row">
+            <div class="top-banner__left">
+              <h1 class="top-banner__left-title">Орехи<br> и сухофрукты оптом
+              </h1>
+              <div class="top-banner__left-text">Весь ассортимент орехов и сухофруктов в одном магазине по лучшим ценам!
+              </div>
+            </div>
+            <div class="top-banner__right">
+              <form class="form-get-price top-banner__form" id="getPriceForm" method="POST">
+                <div class="form-get-price__title">Узнайте наши цены
+                </div>
+                <div class="form-get-price__text">Весь ассортимент орехов и сухофруктов в одном магазине по лучшим ценам!
+                </div><input class="form-get-price__name" type="text" name="name" placeholder="Ваше имя" required="required"/><input class="form-get-price__phone" type="text" name="phone" placeholder="Телефон" data-mask="+7 (999) 999-99-99" required="required"/><input class="form-get-price__email" type="email" name="_replyto" placeholder="E-mail" required="required"/><input class="form-get-price__sub" type="text" name="_gotcha" style="display:none;"/>
+                <button class="form-get-price__submit">Получить оптовый прайс<span class="form-get-price__msg"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preferences">
+        <h2 class="preferences__title">Оцените преимущества работы<br> с профессионалами
+        </h2>
+        <div class="preferences__cards">
+          <div class="preferences-card preferences__item">
+            <div class="preferences-card__inner">
+              <div class="preferences-card__title document-icon">Предоставляем необходимые документы
+              </div>
+              <div class="preferences-card__text">Мы гарантируем, что сделка будет сопровождена полным перечнем документов и необходимой сертификацией для каждого вида продукта.
+              </div>
+            </div>
+          </div>
+          <div class="preferences-card preferences__item">
+            <div class="preferences-card__inner">
+              <div class="preferences-card__title house-car-icon">Отгружаем любые<br> объемы
+              </div>
+              <div class="preferences-card__text">Мы осуществляем оптовые продажи различных наименований товара при заказе от 50 кг.
+              </div>
+            </div>
+          </div>
+          <div class="preferences-card preferences__item">
+            <div class="preferences-card__inner">
+              <div class="preferences-card__title money-icon">Оплата любым удобным способом
+              </div>
+              <div class="preferences-card__text">Мы принимаем оплату за поставляемый товар любым удобным для Вас способом: безналичный перевод, наличные, pay pal  и д.р.
+              </div>
+            </div>
+          </div>
+          <div class="preferences-card preferences__item">
+            <div class="preferences-card__inner">
+              <div class="preferences-card__title woman-icon">Работаем с физическими и юридическими лицами
+              </div>
+              <div class="preferences-card__text">Мы рады сотрудничеству с индивидуальными предпринимателями, средними и крупными компаниями.
+              </div>
+            </div>
+          </div>
+          <div class="preferences-card preferences__item">
+            <div class="preferences-card__inner">
+              <div class="preferences-card__title cart-globus-icon">Доставляем по России и в другие страны
+              </div>
+              <div class="preferences-card__text">Осуществляем доставку во все регионы РФ, а также в любую точку мира. Доставка осуществляется любым удобным для Вас способом и в согласованные с Вами сроки.
+              </div>
+            </div>
+          </div>
+          <div class="preferences__item preferences__item_card-img">
+            <div class="inner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="callback">
+        <div class="callback__content">
+          <p class="callback__text">Ваш персональный менеджер всегда на связи и готов обсудить индивидуальные условия!
+          </p>
+          <button class="callback__btn" data-toggle="modal" data-target="#callbackFormModal">Заказать звонок
+          </button>
+        </div>
+      </div>
+      <div class="main-catalog">
+        <div class="main-catalog__container">
+          <h2 class="main-catalog__title">Орехи и сухофрукты
+          </h2>
+          <div class="main-catalog__items">
+            <div class="main-catalog__space price-img1">
+            </div>
+            <div class="main-catalog__space price-img2">
+            </div><a class="main-catalog__item price-img3" href="nuts.html"><span class="main-catalog__item-inner"><span class="main-catalog__item-text">Узнать ассортимент<br> и цены на орехи</span></span></a><a class="main-catalog__item price-img4" href="#"><span class="main-catalog__item-inner"><span class="main-catalog__item-text">Узнать ассортимент<br> и цены на сухофрукты</span></span></a>
+            <div class="main-catalog__space price-img5">
+            </div>
+            <div class="main-catalog__space price-img6">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="terms" id="terms">
+        <div class="terms__container">
+          <h2 class="terms__title">Оплата и доставка
+          </h2>
+          <div class="terms__scroll-hider">
+            <div class="terms__list">
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-headset">
+                  <div class="terms-icon__number">1
+                  </div>
+                </div>
+                <div class="terms-icon__title">Размещаете заявку
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-scan">
+                  <div class="terms-icon__number">2
+                  </div>
+                </div>
+                <div class="terms-icon__title">Выбираете продукт и его характеристики
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-cart">
+                  <div class="terms-icon__number">3
+                  </div>
+                </div>
+                <div class="terms-icon__title">Указываете объем закупки
+                </div>
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-pen">
+                  <div class="terms-icon__number">4
+                  </div>
+                </div>
+                <div class="terms-icon__title">Выбираете условия проведения оплаты
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-map">
+                  <div class="terms-icon__number">5
+                  </div>
+                </div>
+                <div class="terms-icon__title">Сообщаете, где Вы хотите получить товар
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-wallet">
+                  <div class="terms-icon__number">6
+                  </div>
+                </div>
+                <div class="terms-icon__title">Заключаем контракт&nbsp;/договор
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-pos">
+                  <div class="terms-icon__number">7
+                  </div>
+                </div>
+                <div class="terms-icon__title">Производите оплату любым удобным способом
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms-icon">
+                <div class="terms-icon__img terms-car">
+                  <div class="terms-icon__number">8
+                  </div>
+                </div>
+                <div class="terms-icon__title">Отправка или вывоз товара с нашего склада
+                </div>
+              </div>
+              <div class="terms__space">
+              </div>
+              <div class="terms__result">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about" id="about">
+        <div class="about__content">
+          <h2 class="about__title">О компании
+          </h2>
+          <h3 class="about__sub-title">Наша компания занимается оптовой продажей продуктов питания с доставкой по всему миру.
+          </h3>
+          <p>Если ваш бизнес нуждается в надежном поставщике качественных продуктов питания, то наша компания к вашим услугам (вы обратились по адресу/мы готовы к сотрудничеству с вами).</p>
+          <p>Приоритетом нашей работы является точное и быстрое информирование и координирование по всем возникающим у вас вопросам.</p>
+          <p>Желаем успехов и процветание вам и вашему бизнесу</p>
+          <p class="about__sub-title">С уважением компания Фуд Трейд
+          </p><img class="about__logo" src="assets/images/logo.png" width="171px" height="18px" alt="" role="presentation"/>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="contacts__title">ООО «Энити»
+        </div>
+        <p><span class="contacts__name">Юридический адрес</span>: МО, г. Видное, ул. Ольховая, д. 9, офис 11
+        </p>
+        <p><span class="contacts__name">Фактический адрес</span>: МО, г. Химки ул. Жуковского, д. 10, офис 26
+        </p>
+        <p><span class="contacts__name">ОГРН</span>: 1165003053324   ИНН/КПП: 5003119839/500301001
+        </p>
+        <p><span class="contacts__name">Расчетный счет</span>: 40702 810 8023 2000 1212
+        </p>
+        <p><span class="contacts__name">БИК</span>: 044525593 ОКАТО: 46228501000
+        </p>
+        <p><span class="contacts__name">Кор. Счет</span>: 30101 810 2000 0000 0593
+        </p>
+      </div>
+      <div class="footer">
+        <div class="footer__container">
+          <div class="footer__inner">
+            <div class="social-icons footer__social-icons">
+              <p class="social-icons__text">Расскажите о нас в соцсетях:
+              </p>
+              <ul class="social-icons__list"><li><a class="social-icons__item social-icons__item_fb" href="#"><span>Facebook</span></a></li><li><a class="social-icons__item social-icons__item_ig" href="#"><span>Instagramm</span></a></li><li><a class="social-icons__item social-icons__item_ok" href="#"><span>Одноклассники</span></a></li><li><a class="social-icons__item social-icons__item_tw" href="#"><span>Twitter</span></a></li><li><a class="social-icons__item social-icons__item_vk" href="#"><span>ВКонтакте</span></a></li>
+              </ul>
+            </div>
+            <form class="footer__form">
+              <div class="footer__logo"><a href="#"><img src="assets/images/bottom_logo.png" alt="Foodtrade logo"></a>
+              </div>
+              <div class="footer__controls">
+                <p class="footer__form-title">Остались вопросы?
+                </p>
+                <button class="footer__letter" type="button" data-toggle="modal" data-target="#feedbackFormModal">Напишите нам
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="callback-form" id="callbackFormModal" tabindex="-1" role="dialog">
+        <div class="callback-form__wrapper">
+          <div class="callback-form__content">
+            <div class="callback-form__header">
+              <p class="callback-form__title">Закажите обратный звонок
+              </p>
+              <p class="callback-form__header-text">Оставьте свой номер телефона и наш специалист свяжется с Вами в ближайшее время
+              </p>
+              <button class="callback-form__close" type="button" data-dismiss="modal"><span>&times;</span>
+              </button>
+            </div>
+            <div class="callback-form__body">
+              <form class="callback-form__form" id="callbackForm"><input class="callback-form__name" type="text" name="name" placeholder="Имя" required="required"/><input class="callback-form__phone bfh-phone" type="text" name="phone" data-mask="+7 (999) 999-99-99" placeholder="Телефон" required="required"/><input class="callback-form__sub" type="text" name="_gotcha" style="display:none;"/>
+                <button class="callback-form__submit" type="submit">Заказать звонок
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback-form" id="feedbackFormModal" tabindex="-1" role="dialog">
+        <div class="feedback-form__wrapper">
+          <div class="feedback-form__content">
+            <div class="feedback-form__header">
+              <p class="feedback-form__title">Напишите свой вопрос
+              </p>
+              <p class="feedback-form__header-text">И мы обязательно на него ответим
+              </p>
+              <button class="feedback-form__close" type="button" data-dismiss="modal"><span>&times;</span>
+              </button>
+            </div>
+            <div class="feedback-form__body">
+              <form class="feedback-form__form" id="feedbackForm"><input type="text" name="name" placeholder="Имя" required="required"/><input type="text" phone="phone" placeholder="Телефон" data-mask="+7 (999) 999-99-99"/><input type="text" name="_replyto" placeholder="Email" required="required"/><input class="feedback-form__sub" type="text" name="_gotcha" style="display:none;"/><textarea class="feedback-form__message" placeholder="Ваше сообщение..." required="required"></textarea>
+                <button class="feedback-form__submit" type="submit">Отправить сообщение
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/assets/scripts/vendors.js"></script>
+      <script src="/assets/scripts/app.js"></script>
+      <script>require('src/scripts/app.js');</script>
+    </div>
+  </body>
+</html>

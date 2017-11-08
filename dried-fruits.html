@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foodtrade - сухофрукты оптом</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <base href="/">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link href="/assets/styles/vendors.css" rel="stylesheet">
+    <link href="/assets/styles/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="header__row"><a class="header__logo" href="/"><img class="header__logo-img" src="assets/images/logo.png" width="250" height="28" alt="" role="presentation"/></a>
+          <p class="header__phone">
+            <button class="header__toggle-menu" data-toggle="collapse" data-target="#topNav">
+            </button><a class="header__phone-link" href="tel:+88002548734"><span>8 800</span><span class="header__phone-color">254-87-34</span></a>
+          </p>
+          <button class="header__callback" data-toggle="modal" data-target="#callbackFormModal"><span>Заказать звонок</span>
+          </button>
+        </div>
+      </div>
+      <div class="nav collapse" id="topNav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link toscroll" href="nuts.html">Орехи</a>
+          </li>
+          <li class="nav__item"><a class="nav__link toscroll" href="dried-fruits.html">Сухофрукты</a>
+          </li>
+          <li class="nav__item"><a class="nav__link toscroll" href="#terms">Оплата и доставка</a>
+          </li>
+          <li class="nav__item"><a class="nav__link toscroll" href="#about">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <div class="top-banner-dried-fruits">
+        <div class="top-banner-dried-fruits__container">
+          <div class="top-banner-dried-fruits__row">
+            <div class="top-banner-dried-fruits__left">
+              <h1 class="top-banner-dried-fruits__left-title">Сухофрукты
+              </h1>
+              <div class="top-banner-dried-fruits__left-text">Гарантированная скидка<br> 5% на первый заказ
+              </div>
+            </div>
+            <div class="top-banner-dried-fruits__right">
+              <form class="form-get-price top-banner-dried-fruits__form" id="getPriceForm" method="POST">
+                <div class="form-get-price__title">Узнайте наши цены
+                </div>
+                <div class="form-get-price__text">Весь ассортимент орехов и сухофруктов в одном магазине по лучшим ценам!
+                </div><input class="form-get-price__name" type="text" name="name" placeholder="Ваше имя" required="required"/><input class="form-get-price__phone" type="text" name="phone" placeholder="Телефон" data-mask="+7 (999) 999-99-99" required="required"/><input class="form-get-price__email" type="email" name="_replyto" placeholder="E-mail" required="required"/><input class="form-get-price__sub" type="text" name="_gotcha" style="display:none;"/>
+                <button class="form-get-price__submit">Получить оптовый прайс<span class="form-get-price__msg"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products products_more">
+        <div class="products__container">
+          <h2 class="products__title">Цены указаны за 1кг сухофруктов
+          </h2>
+          <ul class="products__list">
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img9.jpg" alt="Цукаты" title=""/>
+                <p class="product-card__name">Цукаты<span class="product-card__type">в ассортименте</span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">220<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img10.jpg" alt="Банановые чипсы" title=""/>
+                <p class="product-card__name">Банановые чипсы<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">230<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img1.jpg" alt="Изюм Малаяр" title=""/>
+                <p class="product-card__name">Изюм Малаяр<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">160<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img13.jpg" alt="Изюм Джамбо" title=""/>
+                <p class="product-card__name">Изюм Джамбо<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">280<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img12.jpg" alt="Изюм Золотой" title=""/>
+                <p class="product-card__name">Изюм Золотой<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">200<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img11.jpg" alt="Изюм Изабелла" title=""/>
+                <p class="product-card__name">Изюм Изабелла<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">450<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img1.jpg" alt="Изюм Афганский" title=""/>
+                <p class="product-card__name">Изюм Афганский<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">210<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img2.jpg" alt="Курага" title=""/>
+                <p class="product-card__name">Курага<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">110<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img14.jpg" alt="Чернослив" title=""/>
+                <p class="product-card__name">Чернослив<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">135<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img8.jpg" alt="Клюква" title=""/>
+                <p class="product-card__name">Клюква<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">400<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img4.jpg" alt="Инжир" title=""/>
+                <p class="product-card__name">Инжир<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">320<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img15.jpg" alt="Финики" title=""/>
+                <p class="product-card__name">Финики<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">90<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img17.jpg" alt="Шиповник" title=""/>
+                <p class="product-card__name">Шиповник<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">180<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img7.jpg" alt="Клубника сушеная" title=""/>
+                <p class="product-card__name">Клубника сушеная<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">530<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img3.jpg" alt="Груша" title=""/>
+                <p class="product-card__name">Груша<span class="product-card__type"></span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">230<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+            <li class="product-card products__item">
+              <div class="product-card__wr-img"><img class="product-card__img" src="assets/images/catalog/fruits-img16.jpg" alt="Кумкват" title=""/>
+                <p class="product-card__name">Кумкват<span class="product-card__type">в ассортименте</span>
+                </p>
+              </div>
+              <div class="product-card__price-panel">
+                <div class="product-card__price">260<span> руб.</span>
+                </div><a class="product-card__more" href="#" data-toggle="modal" data-target="#priceFormModal">Подробнее</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-more">
+        <div class="product-more__wrapper">
+          <button class="product-more__btn">Показать еще
+          </button>
+        </div>
+      </div>
+      <div class="callback">
+        <div class="callback__content">
+          <p class="callback__text">Ваш персональный менеджер всегда на связи и готов обсудить индивидуальные условия!
+          </p>
+          <button class="callback__btn" data-toggle="modal" data-target="#callbackFormModal">Заказать звонок
+          </button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer__container">
+          <div class="footer__inner">
+            <div class="social-icons footer__social-icons">
+              <p class="social-icons__text">Расскажите о нас в соцсетях:
+              </p>
+              <ul class="social-icons__list"><li><a class="social-icons__item social-icons__item_fb" href="#"><span>Facebook</span></a></li><li><a class="social-icons__item social-icons__item_ig" href="#"><span>Instagramm</span></a></li><li><a class="social-icons__item social-icons__item_ok" href="#"><span>Одноклассники</span></a></li><li><a class="social-icons__item social-icons__item_tw" href="#"><span>Twitter</span></a></li><li><a class="social-icons__item social-icons__item_vk" href="#"><span>ВКонтакте</span></a></li>
+              </ul>
+            </div>
+            <form class="footer__form">
+              <div class="footer__logo"><a href="#"><img src="assets/images/bottom_logo.png" alt="Foodtrade logo"></a>
+              </div>
+              <div class="footer__controls">
+                <p class="footer__form-title">Остались вопросы?
+                </p>
+                <button class="footer__letter" type="button" data-toggle="modal" data-target="#feedbackFormModal">Напишите нам
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="callback-form" id="callbackFormModal" tabindex="-1" role="dialog">
+        <div class="callback-form__wrapper">
+          <div class="callback-form__content">
+            <div class="callback-form__header">
+              <p class="callback-form__title">Закажите обратный звонок
+              </p>
+              <p class="callback-form__header-text">Оставьте свой номер телефона и наш специалист свяжется с Вами в ближайшее время
+              </p>
+              <button class="callback-form__close" type="button" data-dismiss="modal"><span>&times;</span>
+              </button>
+            </div>
+            <div class="callback-form__body">
+              <form class="callback-form__form" id="callbackForm"><input class="callback-form__name" type="text" name="name" placeholder="Имя" required="required"/><input class="callback-form__phone bfh-phone" type="text" name="phone" data-mask="+7 (999) 999-99-99" placeholder="Телефон" required="required"/><input class="callback-form__sub" type="text" name="_gotcha" style="display:none;"/>
+                <button class="callback-form__submit" type="submit">Заказать звонок
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback-form" id="feedbackFormModal" tabindex="-1" role="dialog">
+        <div class="feedback-form__wrapper">
+          <div class="feedback-form__content">
+            <div class="feedback-form__header">
+              <p class="feedback-form__title">Напишите свой вопрос
+              </p>
+              <p class="feedback-form__header-text">И мы обязательно на него ответим
+              </p>
+              <button class="feedback-form__close" type="button" data-dismiss="modal"><span>&times;</span>
+              </button>
+            </div>
+            <div class="feedback-form__body">
+              <form class="feedback-form__form" id="feedbackForm"><input type="text" name="name" placeholder="Имя" required="required"/><input type="text" phone="phone" placeholder="Телефон" data-mask="+7 (999) 999-99-99"/><input type="text" name="_replyto" placeholder="Email" required="required"/><input class="feedback-form__sub" type="text" name="_gotcha" style="display:none;"/><textarea class="feedback-form__message" placeholder="Ваше сообщение..." required="required"></textarea>
+                <button class="feedback-form__submit" type="submit">Отправить сообщение
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-price-modal" id="priceFormModal" tabindex="-1" role="dialog">
+        <div class="form-price-modal__wrapper">
+          <div class="form-price-modal__content">
+            <div class="form-price-modal__header">
+              <p class="form-price-modal__title">Узнайте наши цены
+              </p>
+              <p class="form-price-modal__header-text">Весь ассортимент орехов и сухофруктов в одном магазине по лучшим ценам!
+              </p>
+              <button class="form-price-modal__close" type="button" data-dismiss="modal"><span>&times;</span>
+              </button>
+            </div>
+            <div class="form-price-modal__body">
+              <form class="form-price-modal__form" id="priceForm"><input class="form-price-modal__name" type="text" name="name" placeholder="Ваше имя" required="required"/><input class="form-price-modal__phone" type="text" name="phone" placeholder="Телефон" data-mask="+7 (999) 999-99-99" required="required"/><input class="form-price-modal__email" type="email" name="_replyto" placeholder="E-mail" required="required"/><input class="form-price-modal__sub" type="text" name="_gotcha" style="display:none;"/>
+                <button class="form-price-modal__submit">Получить оптовый прайс
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/assets/scripts/vendors.js"></script>
+      <script src="/assets/scripts/app.js"></script>
+      <script>require('src/scripts/app.js');</script>
+    </div>
+  </body>
+</html>
