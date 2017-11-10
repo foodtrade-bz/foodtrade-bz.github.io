@@ -1,1 +1,1133 @@
-!function(){"use strict";var e="undefined"==typeof global?self:global;if("function"!=typeof e.require){var t={},i={},s={},r={}.hasOwnProperty,n=/^\.\.?(\/|$)/,a=function(e,t){for(var i,s=[],r=(n.test(t)?e+"/"+t:t).split("/"),a=0,o=r.length;a<o;a++)i=r[a],".."===i?s.pop():"."!==i&&""!==i&&s.push(i);return s.join("/")},o=function(e){return e.split("/").slice(0,-1).join("/")},c=function(t){return function(i){var s=a(o(t),i);return e.require(s,t)}},u=function(e,t){var s=d&&d.createHot(e),r={id:e,exports:{},hot:s};return i[e]=r,t(r.exports,c(e),r),r.exports},l=function(e){return s[e]?l(s[e]):e},f=function(e,t){return l(a(o(e),t))},m=function(e,s){null==s&&(s="/");var n=l(e);if(r.call(i,n))return i[n].exports;if(r.call(t,n))return u(n,t[n]);throw new Error("Cannot find module '"+e+"' from '"+s+"'")};m.alias=function(e,t){s[t]=e};var p=/\.[^.\/]+$/,g=/\/index(\.[^\/]+)?$/,h=function(e){if(p.test(e)){var t=e.replace(p,"");r.call(s,t)&&s[t].replace(p,"")!==t+"/index"||(s[t]=e)}if(g.test(e)){var i=e.replace(g,"");r.call(s,i)||(s[i]=e)}};m.register=m.define=function(e,s){if(e&&"object"==typeof e)for(var n in e)r.call(e,n)&&m.register(n,e[n]);else t[e]=s,delete i[e],h(e)},m.list=function(){var e=[];for(var i in t)r.call(t,i)&&e.push(i);return e};var d=e._hmr&&new e._hmr(f,m,t,i);m._cache=i,m.hmr=d&&d.wrap,m.brunch=!0,e.require=m}}(),function(){"undefined"==typeof window?this:window;require.register("src/blocks/callback-form/callback-form.js",function(e,t,i){"use strict";function s(e){return e&&e.__esModule?e:{"default":e}}var r=t("jquery"),n=s(r),a=t("../../scripts/form-helper");document.addEventListener("DOMContentLoaded",function(){var e="callback-form",t="#callbackFormModal";(0,a.initForm)("callbackForm","Форма заказать звонок",function(e){e.reset(),(0,n["default"])(t).modal("hide")},function(e,t){e.reset(),console.log("Ошибка отправки письма"+t)}),(0,n["default"])(t).on("show.bs.modal",function(){(0,n["default"])("."+e+"__wrapper").on("click",function(e){e.target===e.currentTarget&&(0,n["default"])(t).modal("hide")})})})}),require.register("src/blocks/feedback-form/feedback-form.js",function(e,t,i){"use strict";function s(e){return e&&e.__esModule?e:{"default":e}}var r=t("jquery"),n=s(r),a=t("../../scripts/form-helper");document.addEventListener("DOMContentLoaded",function(){var e="feedback-form",t="#feedbackFormModal";(0,a.initForm)("feedbackForm","Форма напишите нам",function(e){e.reset(),(0,n["default"])(t).modal("hide")},function(e,t){e.reset(),console.log("Ошибка отправки письма"+t)}),(0,n["default"])(t).on("show.bs.modal",function(){(0,n["default"])("."+e+"__wrapper").on("click",function(e){e.target===e.currentTarget&&(0,n["default"])(t).modal("hide")})})})}),require.register("src/blocks/form-get-price/form-get-price.js",function(e,t,i){"use strict";var s=t("../../scripts/form-helper"),r=t("../../scripts/getprice");document.addEventListener("DOMContentLoaded",function(){var e="form-get-price";(0,s.initForm)("getPriceForm","Запрос прайс-листа с сайта Foodtrade",function(t){t.reset(),t.classList.add(e+"_sended");var i=t.querySelector("."+e+"__msg");i&&(i.innerHTML="Сообщение отправлено"),setTimeout(function(){i&&(i.innerHTML=""),t.classList.remove(e+"_sended")},2e3),(0,r.getPrice)()},function(e,t){e.reset(),console.log("Ошибка отправки письма"+t)})})}),require.register("src/blocks/form-price-modal/form-price-modal.js",function(e,t,i){"use strict";function s(e){return e&&e.__esModule?e:{"default":e}}var r=t("jquery"),n=s(r),a=t("../../scripts/form-helper"),o=t("../../scripts/getprice");document.addEventListener("DOMContentLoaded",function(){var e="form-price-modal",t="#priceFormModal";(0,a.initForm)("priceForm","Запрос прайс-листа с сайта Foodtrade каталог.",function(e){e.reset(),(0,o.getPrice)(),(0,n["default"])(t).modal("hide")},function(e,t){e.reset(),console.log("Ошибка отправки письма"+t)}),(0,n["default"])(t).on("show.bs.modal",function(){(0,n["default"])("."+e+"__wrapper").on("click",function(e){e.target===e.currentTarget&&(0,n["default"])(t).modal("hide")})})})}),require.register("src/blocks/layout-default/layout-default.js",function(e,t,i){"use strict";function s(e){return e&&e.__esModule?e:{"default":e}}var r=t("jquery"),n=s(r);(0,n["default"])(document).ready(function(){(0,n["default"])("a.toscroll").on("click",function(e){var t=e.target.href,i=t.substring(t.indexOf("#")+1);return(0,n["default"])("html, body").animate({scrollTop:(0,n["default"])("#"+i).offset().top},500),!1})})}),require.register("src/blocks/product-more/product-more.js",function(e,t,i){"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".product-more__btn");e&&e.addEventListener("click",function(){var t=document.querySelector(".products");t&&(t.classList.contains("products_more")?t.classList.remove("products_more"):(e.setAttribute("data-target","#priceFormModal"),e.setAttribute("data-toggle","modal")))})})}),require.register("src/data/contacts.json",function(e,t,i){i.exports={"Юридический адрес":"МО, г. Видное, ул. Ольховая, д. 9, офис 11","Фактический адрес":"МО, г. Химки ул. Жуковского, д. 10, офис 26","ОГРН":"1165003053324   ИНН/КПП: 5003119839/500301001","Расчетный счет":"40702 810 8023 2000 1212","БИК":"044525593 ОКАТО: 46228501000","Кор. Счет":"30101 810 2000 0000 0593"}}),require.register("src/data/nav.json",function(e,t,i){i.exports={"Орехи":"nuts.html","Сухофрукты":"dried-fruits.html","Оплата и доставка":"#terms","О нас":"#about"}}),require.register("src/data/preferences.json",function(e,t,i){i.exports=[{title:"Предоставляем необходимые документы",text:"Мы гарантируем, что сделка будет сопровождена полным перечнем документов и необходимой сертификацией для каждого вида продукта.",icon:"document-icon"},{title:"Отгружаем любые<br> объемы",text:"Мы осуществляем оптовые продажи различных наименований товара при заказе от 50 кг.",icon:"house-car-icon"},{title:"Оплата любым удобным способом",text:"Мы принимаем оплату за поставляемый товар любым удобным для Вас способом: безналичный перевод, наличные, pay pal  и д.р.",icon:"money-icon"},{title:"Работаем с физическими и юридическими лицами",text:"Мы рады сотрудничеству с индивидуальными предпринимателями, средними и крупными компаниями.",icon:"woman-icon"},{title:"Доставляем по России и в другие страны",text:"Осуществляем доставку во все регионы РФ, а также в любую точку мира. Доставка осуществляется любым удобным для Вас способом и в согласованные с Вами сроки.",icon:"cart-globus-icon"}]}),require.register("src/data/product-dried-fruits.json",function(e,t,i){i.exports=[{img:"assets/images/catalog/fruits-img9.jpg",name:"Цукаты",type:"в ассортименте",price:"220"},{img:"assets/images/catalog/fruits-img10.jpg",name:"Банановые чипсы",type:"",price:"230"},{img:"assets/images/catalog/fruits-img1.jpg",name:"Изюм Малаяр",type:"",price:"160"},{img:"assets/images/catalog/fruits-img13.jpg",name:"Изюм Джамбо",type:"",price:"280"},{img:"assets/images/catalog/fruits-img12.jpg",name:"Изюм Золотой",type:"",price:"200"},{img:"assets/images/catalog/fruits-img11.jpg",name:"Изюм Изабелла",type:"",price:"450"},{img:"assets/images/catalog/fruits-img1.jpg",name:"Изюм Афганский",type:"",price:"210"},{img:"assets/images/catalog/fruits-img2.jpg",name:"Курага",type:"",price:"110"},{img:"assets/images/catalog/fruits-img14.jpg",name:"Чернослив",type:"",price:"135"},{img:"assets/images/catalog/fruits-img8.jpg",name:"Клюква",type:"",price:"400"},{img:"assets/images/catalog/fruits-img4.jpg",name:"Инжир",type:"",price:"320"},{img:"assets/images/catalog/fruits-img15.jpg",name:"Финики",type:"",price:"90"},{img:"assets/images/catalog/fruits-img17.jpg",name:"Шиповник",type:"",price:"180"},{img:"assets/images/catalog/fruits-img7.jpg",name:"Клубника сушеная",type:"",price:"530"},{img:"assets/images/catalog/fruits-img3.jpg",name:"Груша",type:"",price:"230"},{img:"assets/images/catalog/fruits-img16.jpg",name:"Кумкват",type:"в ассортименте",price:"260"}]}),require.register("src/data/product-nuts.json",function(e,t,i){i.exports=[{img:"assets/images/catalog/greece.jpg",name:"Грецкий Орех",type:"Половинки",price:"620"},{img:"assets/images/catalog/greece.jpg",name:"Грецкий Орех",type:"Четвертинки",price:"550"},{img:"assets/images/catalog/mindal.jpg",name:"Миндаль",type:"",price:"640"},{img:"assets/images/catalog/arahis.jpg",name:"Арахис",type:"",price:"140"},{img:"assets/images/catalog/keshiu.jpg",name:"Кешью",type:"",price:"800"},{img:"assets/images/catalog/nuts-img2.jpg",name:"Кедровый орех",type:"в скорлупе",price:"270"},{img:"assets/images/catalog/kedr.jpg",name:"Кедровый орех",type:"ядро",price:"1100"},{img:"assets/images/catalog/nuts-img1.jpg",name:"Фундук",type:"неочищенный",price:"260"},{img:"assets/images/catalog/nuts-img1.jpg",name:"Фундук",type:"очищенный",price:"600"},{img:"assets/images/catalog/makadamia.jpg",name:"Макадамия",type:"",price:"2500"},{img:"assets/images/catalog/nuts-img3.jpg",name:"Пекан",type:"",price:"1000"},{img:"assets/images/catalog/fistashki.jpg",name:"Фисташки",type:"в скорлупе",price:"550"},{img:"assets/images/catalog/fistashki.jpg",name:"Фисташки",type:"очищенные",price:"1450"},{img:"assets/images/catalog/brasil.jpg",name:"Бразильский орех",type:"",price:"1200"},{img:"assets/images/catalog/nuts-img5.jpg",name:"Семечки подсолнуха",type:"",price:"55"},{img:"assets/images/catalog/nuts-img4.jpg",name:"Семечки тыквенные",price:"240"}]}),require.register("src/data/site-settings.json",function(e,t,i){i.exports={name:"Foodtrade - оптовая продажа орехов и сухофруктов",email:"info@foodtrade.bz"}}),require.register("src/data/social-icons.json",function(e,t,i){i.exports=[{id:"fb",name:"Facebook",href:"#"},{id:"ig",name:"Instagramm",href:"#"},{id:"ok",name:"Одноклассники",href:"#"},{id:"tw",name:"Twitter",href:"#"},{id:"vk",name:"ВКонтакте",href:"#"}]}),require.register("src/data/terms.json",function(e,t,i){i.exports={1:[{index:"1",title:"Размещаете заявку",icon:"terms-headset"},{index:"2",title:"Выбираете продукт и его характеристики",icon:"terms-scan"},{index:"3",title:"Указываете объем закупки",icon:"terms-cart"}],2:[{index:"4",title:"Выбираете условия проведения оплаты",icon:"terms-pen"},{index:"5",title:"Сообщаете, где Вы хотите получить товар",icon:"terms-map"},{index:"6",title:"Заключаем контракт&nbsp;/договор",icon:"terms-wallet"}],3:[{index:"7",title:"Производите оплату любым удобным способом",icon:"terms-pos"},{index:"8",title:"Отправка или вывоз товара с нашего склада",icon:"terms-car"}]}}),require.register("src/data/top-dried-fruits.json",function(e,t,i){i.exports={title:"Сухофрукты",subTitle:"",backgroundImage:"images/dried-fruits-bg.jpg"}}),require.register("src/data/top-nuts.json",function(e,t,i){i.exports={title:"Орехи",subTitle:"",backgroundImage:"images/nuts-bg.jpg"}}),require.register("src/scripts/app.js",function(e,t,i){"use strict";t("./inputmask"),t("../blocks/form-get-price/form-get-price"),t("../blocks/callback-form/callback-form"),t("../blocks/feedback-form/feedback-form"),t("../blocks/form-price-modal/form-price-modal"),t("../blocks/layout-default/layout-default"),t("../blocks/product-more/product-more")}),require.register("src/scripts/form-helper.ts",function(e,t,i){"use strict";function s(e,t,i,s){var r=document.getElementById(e);if(null===r)return!1;var a="https://formspree.io/";return r.addEventListener("submit",function(e){e.preventDefault();var o;0==r.getElementsByClassName("spinner").length?(o=document.createElement("div"),o.className="spinner",r.appendChild(o)):o=r.getElementsByClassName("spinner")[0];var c=new FormData(r);c.append("_subject",t),c.append("url",window.location.href),fetch(""+a+n,{method:"post",mode:"cors",headers:{Accept:"application/json"},body:c}).then(function(e){if(!e.ok)throw new Error("Ошибка отправки почты: status="+e.status+", "+e.statusText);"function"==typeof i&&i(r)})["catch"](function(e){"function"==typeof s&&s(r,e)})}),!0}var r=t("src/data/site-settings.json"),n=r.email||"info@foodtrade.bz";e.initForm=s}),require.register("src/scripts/getprice.js",function(e,t,i){"use strict";function s(){var e="assets/images/price/",t="wholesale_price.pdf",i=document.createElement("a");i.setAttribute("href",e+t),i.download=t,i.click()}Object.defineProperty(e,"__esModule",{value:!0}),e.getPrice=s}),require.register("src/scripts/inputmask.js",function(e,t,i){"use strict";+function(e){var t=void 0!==window.orientation,i=navigator.userAgent.toLowerCase().indexOf("android")>-1,s="Microsoft Internet Explorer"==window.navigator.appName,r=function a(t,s){i||(this.$element=e(t),this.options=e.extend({},a.DEFAULTS,s),this.mask=String(this.options.mask),this.init(),this.listen(),this.checkVal())};r.DEFAULTS={mask:"",placeholder:"_",definitions:{9:"[0-9]",a:"[A-Za-z]",w:"[A-Za-z0-9]",h:"[A-Fa-f0-9]","*":"."}},r.prototype.init=function(){var t=this.options.definitions,i=this.mask.length;this.tests=[],this.partialPosition=this.mask.length,this.firstNonMaskPos=null,e.each(this.mask.split(""),e.proxy(function(e,s){"?"==s?(i--,this.partialPosition=e):t[s]?(this.tests.push(new RegExp(t[s])),null===this.firstNonMaskPos&&(this.firstNonMaskPos=this.tests.length-1)):this.tests.push(null)},this)),this.buffer=e.map(this.mask.split(""),e.proxy(function(e,i){if("?"!=e)return t[e]?this.options.placeholder:e},this)),this.focusText=this.$element.val(),this.$element.data("rawMaskFn",e.proxy(function(){return e.map(this.buffer,function(e,t){return this.tests[t]&&e!=this.options.placeholder?e:null}).join("")},this))},r.prototype.listen=function(){if(!this.$element.attr("readonly")){var t=(s?"paste":"input")+".bs.inputmask";this.$element.on("unmask.bs.inputmask",e.proxy(this.unmask,this)).on("focus.bs.inputmask",e.proxy(this.focusEvent,this)).on("blur.bs.inputmask",e.proxy(this.blurEvent,this)).on("keydown.bs.inputmask",e.proxy(this.keydownEvent,this)).on("keypress.bs.inputmask",e.proxy(this.keypressEvent,this)).on(t,e.proxy(this.pasteEvent,this))}},r.prototype.caret=function(e,t){if(0!==this.$element.length){if("number"==typeof e)return t="number"==typeof t?t:e,this.$element.each(function(){if(this.setSelectionRange)this.setSelectionRange(e,t);else if(this.createTextRange){var i=this.createTextRange();i.collapse(!0),i.moveEnd("character",t),i.moveStart("character",e),i.select()}});if(this.$element[0].setSelectionRange)e=this.$element[0].selectionStart,t=this.$element[0].selectionEnd;else if(document.selection&&document.selection.createRange){var i=document.selection.createRange();e=0-i.duplicate().moveStart("character",-1e5),t=e+i.text.length}return{begin:e,end:t}}},r.prototype.seekNext=function(e){for(var t=this.mask.length;++e<=t&&!this.tests[e];);return e},r.prototype.seekPrev=function(e){for(;--e>=0&&!this.tests[e];);return e},r.prototype.shiftL=function(e,t){var i=this.mask.length;if(!(e<0)){for(var s=e,r=this.seekNext(t);s<i;s++)if(this.tests[s]){if(!(r<i&&this.tests[s].test(this.buffer[r])))break;this.buffer[s]=this.buffer[r],this.buffer[r]=this.options.placeholder,r=this.seekNext(r)}this.writeBuffer(),this.caret(Math.max(this.firstNonMaskPos,e))}},r.prototype.shiftR=function(e){for(var t=this.mask.length,i=e,s=this.options.placeholder;i<t;i++)if(this.tests[i]){var r=this.seekNext(i),n=this.buffer[i];if(this.buffer[i]=s,!(r<t&&this.tests[r].test(n)))break;s=n}},r.prototype.unmask=function(){this.$element.unbind(".bs.inputmask").removeData("bs.inputmask")},r.prototype.focusEvent=function(){this.focusText=this.$element.val();var e=this.mask.length,t=this.checkVal();this.writeBuffer();var i=this,s=function(){t==e?i.caret(0,t):i.caret(t)};s(),setTimeout(s,50)},r.prototype.blurEvent=function(){this.checkVal(),this.$element.val()!==this.focusText&&(this.$element.trigger("change"),this.$element.trigger("input"))},r.prototype.keydownEvent=function(e){var i=e.which;if(8==i||46==i||t&&127==i){var s=this.caret(),r=s.begin,n=s.end;return n-r===0&&(r=46!=i?this.seekPrev(r):n=this.seekNext(r-1),n=46==i?this.seekNext(n):n),this.clearBuffer(r,n),this.shiftL(r,n-1),!1}if(27==i)return this.$element.val(this.focusText),this.caret(0,this.checkVal()),!1},r.prototype.keypressEvent=function(e){var t=this.mask.length,i=e.which,s=this.caret();if(e.ctrlKey||e.altKey||e.metaKey||i<32)return!0;if(i){s.end-s.begin!==0&&(this.clearBuffer(s.begin,s.end),this.shiftL(s.begin,s.end-1));var r=this.seekNext(s.begin-1);if(r<t){var n=String.fromCharCode(i);if(this.tests[r].test(n)){this.shiftR(r),this.buffer[r]=n,this.writeBuffer();var a=this.seekNext(r);this.caret(a)}}return!1}},r.prototype.pasteEvent=function(){var e=this;setTimeout(function(){e.caret(e.checkVal(!0))},0)},r.prototype.clearBuffer=function(e,t){for(var i=this.mask.length,s=e;s<t&&s<i;s++)this.tests[s]&&(this.buffer[s]=this.options.placeholder)},r.prototype.writeBuffer=function(){return this.$element.val(this.buffer.join("")).val()},r.prototype.checkVal=function(e){for(var t=this.mask.length,i=this.$element.val(),s=-1,r=0,n=0;r<t;r++)if(this.tests[r]){for(this.buffer[r]=this.options.placeholder;n++<i.length;){var a=i.charAt(n-1);if(this.tests[r].test(a)){this.buffer[r]=a,s=r;break}}if(n>i.length)break}else this.buffer[r]==i.charAt(n)&&r!=this.partialPosition&&(n++,s=r);return!e&&s+1<this.partialPosition?(this.$element.val(""),this.clearBuffer(0,t)):(e||s+1>=this.partialPosition)&&(this.writeBuffer(),e||this.$element.val(this.$element.val().substring(0,s+1))),this.partialPosition?r:this.firstNonMaskPos};var n=e.fn.inputmask;e.fn.inputmask=function(t){return this.each(function(){var i=e(this),s=i.data("bs.inputmask");s||i.data("bs.inputmask",s=new r(this,t))})},e.fn.inputmask.Constructor=r,e.fn.inputmask.noConflict=function(){return e.fn.inputmask=n,this},e(document).on("focus.bs.inputmask.data-api","[data-mask]",function(t){var i=e(this);i.data("bs.inputmask")||i.inputmask(i.data())})}(window.jQuery)}),require.register("___globals___",function(e,t,i){window.$=t("jquery"),window.jQuery=t("jquery"),window.Popper=t("popper.js/dist/umd/popper"),window.bootstrap=t("bootstrap")})}(),require("___globals___");
+(function() {
+  'use strict';
+
+  var globals = typeof global === 'undefined' ? self : global;
+  if (typeof globals.require === 'function') return;
+
+  var modules = {};
+  var cache = {};
+  var aliases = {};
+  var has = {}.hasOwnProperty;
+
+  var expRe = /^\.\.?(\/|$)/;
+  var expand = function(root, name) {
+    var results = [], part;
+    var parts = (expRe.test(name) ? root + '/' + name : name).split('/');
+    for (var i = 0, length = parts.length; i < length; i++) {
+      part = parts[i];
+      if (part === '..') {
+        results.pop();
+      } else if (part !== '.' && part !== '') {
+        results.push(part);
+      }
+    }
+    return results.join('/');
+  };
+
+  var dirname = function(path) {
+    return path.split('/').slice(0, -1).join('/');
+  };
+
+  var localRequire = function(path) {
+    return function expanded(name) {
+      var absolute = expand(dirname(path), name);
+      return globals.require(absolute, path);
+    };
+  };
+
+  var initModule = function(name, definition) {
+    var hot = hmr && hmr.createHot(name);
+    var module = {id: name, exports: {}, hot: hot};
+    cache[name] = module;
+    definition(module.exports, localRequire(name), module);
+    return module.exports;
+  };
+
+  var expandAlias = function(name) {
+    return aliases[name] ? expandAlias(aliases[name]) : name;
+  };
+
+  var _resolve = function(name, dep) {
+    return expandAlias(expand(dirname(name), dep));
+  };
+
+  var require = function(name, loaderPath) {
+    if (loaderPath == null) loaderPath = '/';
+    var path = expandAlias(name);
+
+    if (has.call(cache, path)) return cache[path].exports;
+    if (has.call(modules, path)) return initModule(path, modules[path]);
+
+    throw new Error("Cannot find module '" + name + "' from '" + loaderPath + "'");
+  };
+
+  require.alias = function(from, to) {
+    aliases[to] = from;
+  };
+
+  var extRe = /\.[^.\/]+$/;
+  var indexRe = /\/index(\.[^\/]+)?$/;
+  var addExtensions = function(bundle) {
+    if (extRe.test(bundle)) {
+      var alias = bundle.replace(extRe, '');
+      if (!has.call(aliases, alias) || aliases[alias].replace(extRe, '') === alias + '/index') {
+        aliases[alias] = bundle;
+      }
+    }
+
+    if (indexRe.test(bundle)) {
+      var iAlias = bundle.replace(indexRe, '');
+      if (!has.call(aliases, iAlias)) {
+        aliases[iAlias] = bundle;
+      }
+    }
+  };
+
+  require.register = require.define = function(bundle, fn) {
+    if (bundle && typeof bundle === 'object') {
+      for (var key in bundle) {
+        if (has.call(bundle, key)) {
+          require.register(key, bundle[key]);
+        }
+      }
+    } else {
+      modules[bundle] = fn;
+      delete cache[bundle];
+      addExtensions(bundle);
+    }
+  };
+
+  require.list = function() {
+    var list = [];
+    for (var item in modules) {
+      if (has.call(modules, item)) {
+        list.push(item);
+      }
+    }
+    return list;
+  };
+
+  var hmr = globals._hmr && new globals._hmr(_resolve, require, modules, cache);
+  require._cache = cache;
+  require.hmr = hmr && hmr.wrap;
+  require.brunch = true;
+  globals.require = require;
+})();
+
+(function() {
+var global = typeof window === 'undefined' ? this : window;
+var __makeRelativeRequire = function(require, mappings, pref) {
+  var none = {};
+  var tryReq = function(name, pref) {
+    var val;
+    try {
+      val = require(pref + '/node_modules/' + name);
+      return val;
+    } catch (e) {
+      if (e.toString().indexOf('Cannot find module') === -1) {
+        throw e;
+      }
+
+      if (pref.indexOf('node_modules') !== -1) {
+        var s = pref.split('/');
+        var i = s.lastIndexOf('node_modules');
+        var newPref = s.slice(0, i).join('/');
+        return tryReq(name, newPref);
+      }
+    }
+    return none;
+  };
+  return function(name) {
+    if (name in mappings) name = mappings[name];
+    if (!name) return;
+    if (name[0] !== '.' && pref) {
+      var val = tryReq(name, pref);
+      if (val !== none) return val;
+    }
+    return require(name);
+  }
+};
+require.register("src/blocks/callback-form/callback-form.js", function(exports, require, module) {
+'use strict';
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _formHelper = require('../../scripts/form-helper');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+	var formPrefix = 'callback-form';
+	var modalId = '#callbackFormModal';
+	(0, _formHelper.initForm)('callbackForm', 'Форма заказать звонок', function (form) {
+		form.reset();
+		(0, _jquery2.default)(modalId).modal('hide');
+	}, function (form, error) {
+		form.reset();
+		console.log('Ошибка отправки письма' + error);
+		return;
+	});
+	(0, _jquery2.default)(modalId).on('show.bs.modal', function () {
+		(0, _jquery2.default)('.' + formPrefix + '__wrapper').on('click', function (event) {
+			if (event.target === event.currentTarget) {
+				(0, _jquery2.default)(modalId).modal('hide');
+			}
+		});
+	});
+});
+
+});
+
+require.register("src/blocks/feedback-form/feedback-form.js", function(exports, require, module) {
+'use strict';
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _formHelper = require('../../scripts/form-helper');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+	var formPrefix = 'feedback-form';
+	var modalId = '#feedbackFormModal';
+	(0, _formHelper.initForm)('feedbackForm', 'Форма напишите нам', function (form) {
+		form.reset();
+		(0, _jquery2.default)(modalId).modal('hide');
+	}, function (form, error) {
+		form.reset();
+		console.log('Ошибка отправки письма' + error);
+		return;
+	});
+	(0, _jquery2.default)(modalId).on('show.bs.modal', function () {
+		(0, _jquery2.default)('.' + formPrefix + '__wrapper').on('click', function (event) {
+			if (event.target === event.currentTarget) {
+				(0, _jquery2.default)(modalId).modal('hide');
+			}
+		});
+	});
+});
+
+});
+
+require.register("src/blocks/form-get-price/form-get-price.js", function(exports, require, module) {
+'use strict';
+
+var _formHelper = require('../../scripts/form-helper');
+
+var _getprice = require('../../scripts/getprice');
+
+document.addEventListener('DOMContentLoaded', function () {
+	var formPrefix = 'form-get-price';
+	(0, _formHelper.initForm)('getPriceForm', 'Запрос прайс-листа с сайта Foodtrade', function (form) {
+		form.reset();
+		form.classList.add(formPrefix + '_sended');
+		var msg = form.querySelector('.' + formPrefix + '__msg');
+		if (msg) {
+			msg.innerHTML = 'Сообщение отправлено';
+		}
+		setTimeout(function () {
+			if (msg) {
+				msg.innerHTML = '';
+			}
+			form.classList.remove(formPrefix + '_sended');
+		}, 2000);
+		(0, _getprice.getPrice)();
+	}, function (form, error) {
+		form.reset();
+		console.log('Ошибка отправки письма' + error);
+		return;
+	});
+});
+
+});
+
+require.register("src/blocks/form-price-modal/form-price-modal.js", function(exports, require, module) {
+'use strict';
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _formHelper = require('../../scripts/form-helper');
+
+var _getprice = require('../../scripts/getprice');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+	var formPrefix = 'form-price-modal';
+	var modalId = '#priceFormModal';
+	(0, _formHelper.initForm)('priceForm', 'Запрос прайс-листа с сайта Foodtrade каталог.', function (form) {
+		form.reset();
+		(0, _getprice.getPrice)();
+		(0, _jquery2.default)(modalId).modal('hide');
+	}, function (form, error) {
+		form.reset();
+		console.log('Ошибка отправки письма' + error);
+		return;
+	});
+	(0, _jquery2.default)(modalId).on('show.bs.modal', function () {
+		(0, _jquery2.default)('.' + formPrefix + '__wrapper').on('click', function (event) {
+			if (event.target === event.currentTarget) {
+				(0, _jquery2.default)(modalId).modal('hide');
+			}
+		});
+	});
+});
+
+});
+
+require.register("src/blocks/layout-default/layout-default.js", function(exports, require, module) {
+'use strict';
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)(document).ready(function () {
+	(0, _jquery2.default)('a.toscroll').on('click', function (e) {
+		var url = e.target.href;
+		var hash = url.substring(url.indexOf('#') + 1);
+		(0, _jquery2.default)('html, body').animate({
+			scrollTop: (0, _jquery2.default)('#' + hash).offset().top
+		}, 500);
+		return false;
+	});
+});
+
+});
+
+require.register("src/blocks/product-more/product-more.js", function(exports, require, module) {
+'use strict';
+
+document.addEventListener('DOMContentLoaded', function () {
+	var moreButton = document.querySelector('.product-more__btn');
+	if (moreButton) {
+		moreButton.addEventListener('click', function () {
+			var products = document.querySelector('.products');
+			if (products) {
+				if (products.classList.contains('products_more')) {
+					products.classList.remove('products_more');
+				} else {
+					moreButton.setAttribute('data-target', '#priceFormModal');
+					moreButton.setAttribute('data-toggle', 'modal');
+				}
+			}
+		});
+	}
+});
+
+});
+
+require.register("src/data/contacts.json", function(exports, require, module) {
+module.exports = {
+    "Юридический адрес": "МО, г. Видное, ул. Ольховая, д. 9, офис 11",
+    "Фактический адрес": "МО, г. Химки ул. Жуковского, д. 10, офис 26",
+    "ОГРН": "1165003053324   ИНН/КПП: 5003119839/500301001",
+    "Расчетный счет": "40702 810 8023 2000 1212",
+    "БИК": "044525593 ОКАТО: 46228501000",
+    "Кор. Счет": "30101 810 2000 0000 0593"
+};
+});
+
+;require.register("src/data/nav.json", function(exports, require, module) {
+module.exports = {
+    "Орехи": "nuts.html",
+    "Сухофрукты": "dried-fruits.html",
+    "Оплата и доставка": "#terms",
+    "О нас": "#about"
+};
+});
+
+;require.register("src/data/preferences.json", function(exports, require, module) {
+module.exports = [
+  {
+    "title": "Предоставляем необходимые документы",
+    "text": "Мы гарантируем, что сделка будет сопровождена полным перечнем документов и необходимой сертификацией для каждого вида продукта.",
+    "icon": "document-icon"
+  },
+  {
+    "title": "Отгружаем любые<br> объемы",
+    "text": "Мы осуществляем оптовые продажи различных наименований товара при заказе от 50 кг.",
+    "icon": "house-car-icon"
+  },
+  {
+    "title": "Оплата любым удобным способом",
+    "text": "Мы принимаем оплату за поставляемый товар любым удобным для Вас способом: безналичный перевод, наличные, pay pal  и д.р.",
+    "icon": "money-icon"
+  },
+  {
+    "title": "Работаем с физическими и юридическими лицами",
+    "text": "Мы рады сотрудничеству с индивидуальными предпринимателями, средними и крупными компаниями.",
+    "icon": "woman-icon"
+  },
+  {
+    "title": "Доставляем по России и в другие страны",
+    "text": "Осуществляем доставку во все регионы РФ, а также в любую точку мира. Доставка осуществляется любым удобным для Вас способом и в согласованные с Вами сроки.",
+    "icon": "cart-globus-icon"
+  }
+]
+;
+});
+
+;require.register("src/data/product-dried-fruits.json", function(exports, require, module) {
+module.exports = [
+    {
+        "img": "assets/images/catalog/fruits-img9.jpg",
+        "name": "Цукаты",
+        "type": "в ассортименте",
+        "price": "220"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img10.jpg",
+        "name": "Банановые чипсы",
+        "type": "",
+        "price": "230"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img1.jpg",
+        "name": "Изюм Малаяр",
+        "type": "",
+        "price": "160"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img13.jpg",
+        "name": "Изюм Джамбо",
+        "type": "",
+        "price": "280"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img12.jpg",
+        "name": "Изюм Золотой",
+        "type": "",
+        "price": "200"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img11.jpg",
+        "name": "Изюм Изабелла",
+        "type": "",
+        "price": "450"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img1.jpg",
+        "name": "Изюм Афганский",
+        "type": "",
+        "price": "210"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img2.jpg",
+        "name": "Курага",
+        "type": "",
+        "price": "110"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img14.jpg",
+        "name": "Чернослив",
+        "type": "",
+        "price": "135"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img8.jpg",
+        "name": "Клюква",
+        "type": "",
+        "price": "400"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img4.jpg",
+        "name": "Инжир",
+        "type": "",
+        "price": "320"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img15.jpg",
+        "name": "Финики",
+        "type": "",
+        "price": "90"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img17.jpg",
+        "name": "Шиповник",
+        "type": "",
+        "price": "180"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img7.jpg",
+        "name": "Клубника сушеная",
+        "type": "",
+        "price": "530"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img3.jpg",
+        "name": "Груша",
+        "type": "",
+        "price": "230"
+    },
+    {
+        "img": "assets/images/catalog/fruits-img16.jpg",
+        "name": "Кумкват",
+        "type": "в ассортименте",
+        "price": "260"
+    }
+];
+});
+
+;require.register("src/data/product-nuts.json", function(exports, require, module) {
+module.exports = [
+    {
+        "img": "assets/images/catalog/greece.jpg",
+        "name": "Грецкий Орех",
+        "type": "Половинки",
+        "price": "620"
+    },
+    {
+        "img": "assets/images/catalog/greece.jpg",
+        "name": "Грецкий Орех",
+        "type": "Четвертинки",
+        "price": "550"
+    },
+    {
+        "img": "assets/images/catalog/mindal.jpg",
+        "name": "Миндаль",
+        "type": "",
+        "price": "640"
+    },
+    {
+        "img": "assets/images/catalog/arahis.jpg",
+        "name": "Арахис",
+        "type": "",
+        "price": "140"
+    },
+    {
+        "img": "assets/images/catalog/keshiu.jpg",
+        "name": "Кешью",
+        "type": "",
+        "price": "800"
+    },
+    {
+        "img": "assets/images/catalog/nuts-img2.jpg",
+        "name": "Кедровый орех",
+        "type": "в скорлупе",
+        "price": "270"
+    },
+    {
+        "img": "assets/images/catalog/kedr.jpg",
+        "name": "Кедровый орех",
+        "type": "ядро",
+        "price": "1100"
+    },
+    {
+        "img": "assets/images/catalog/nuts-img1.jpg",
+        "name": "Фундук",
+        "type": "неочищенный",
+        "price": "260"
+    },
+    {
+        "img": "assets/images/catalog/nuts-img1.jpg",
+        "name": "Фундук",
+        "type": "очищенный",
+        "price": "600"
+    },
+    {
+        "img": "assets/images/catalog/makadamia.jpg",
+        "name": "Макадамия",
+        "type": "",
+        "price": "2500"
+    },
+    {
+        "img": "assets/images/catalog/nuts-img3.jpg",
+        "name": "Пекан",
+        "type": "",
+        "price": "1000"
+    },
+    {
+        "img": "assets/images/catalog/fistashki.jpg",
+        "name": "Фисташки",
+        "type": "в скорлупе",
+        "price": "550"
+    },
+    {
+        "img": "assets/images/catalog/fistashki.jpg",
+        "name": "Фисташки",
+        "type": "очищенные",
+        "price": "1450"
+    },
+    {
+        "img": "assets/images/catalog/brasil.jpg",
+        "name": "Бразильский орех",
+        "type": "",
+        "price": "1200"
+    },
+    {
+        "img": "assets/images/catalog/nuts-img5.jpg",
+        "name": "Семечки подсолнуха",
+        "type": "",
+        "price": "55"
+    },
+    {
+        "img": "assets/images/catalog/nuts-img4.jpg",
+        "name": "Семечки тыквенные",
+        "price": "240"
+    }
+];
+});
+
+;require.register("src/data/site-settings.json", function(exports, require, module) {
+module.exports = {
+    "name": "Foodtrade - оптовая продажа орехов и сухофруктов",
+    "email": "info@foodtrade.bz"
+};
+});
+
+;require.register("src/data/social-icons.json", function(exports, require, module) {
+module.exports = [
+    {
+        "id": "fb",
+        "name": "Facebook",
+        "href": "#"
+    },
+    {
+        "id": "ig",
+        "name": "Instagramm",
+        "href": "#"
+    },
+    {
+        "id": "ok",
+        "name": "Одноклассники",
+        "href": "#"
+    },
+    {
+        "id": "tw",
+        "name": "Twitter",
+        "href": "#"
+    },
+    {
+        "id": "vk",
+        "name": "ВКонтакте",
+        "href": "#"
+    }
+];
+});
+
+;require.register("src/data/terms.json", function(exports, require, module) {
+module.exports = {
+	"1": [{
+			"index": "1",
+			"title": "Размещаете заявку",
+			"icon": "terms-headset"
+		},
+		{
+			"index": "2",
+			"title": "Выбираете продукт и его характеристики",
+			"icon": "terms-scan"
+		},
+		{
+			"index": "3",
+			"title": "Указываете объем закупки",
+			"icon": "terms-cart"
+		}
+	],
+	"2": [
+		{
+			"index": "4",
+			"title": "Выбираете условия проведения оплаты",
+			"icon": "terms-pen"
+		},{
+			"index": "5",
+			"title": "Сообщаете, где Вы хотите получить товар",
+			"icon": "terms-map"
+		},{
+			"index": "6",
+			"title": "Заключаем контракт&nbsp;/договор",
+			"icon": "terms-wallet"
+		}
+	],
+	"3": [{
+			"index": "7",
+			"title": "Производите оплату любым удобным способом",
+			"icon": "terms-pos"
+		},
+		{
+			"index": "8",
+			"title": "Отправка или вывоз товара с нашего склада",
+			"icon": "terms-car"
+		}
+	]
+}
+;
+});
+
+;require.register("src/data/top-dried-fruits.json", function(exports, require, module) {
+module.exports = {
+    "title": "Сухофрукты",
+    "subTitle": "",
+    "backgroundImage": "images/dried-fruits-bg.jpg"
+};
+});
+
+;require.register("src/data/top-nuts.json", function(exports, require, module) {
+module.exports = {
+    "title": "Орехи",
+    "subTitle": "",
+    "backgroundImage": "images/nuts-bg.jpg"
+};
+});
+
+;require.register("src/scripts/app.js", function(exports, require, module) {
+'use strict';
+
+require('./inputmask');
+
+require('../blocks/form-get-price/form-get-price');
+
+require('../blocks/callback-form/callback-form');
+
+require('../blocks/feedback-form/feedback-form');
+
+require('../blocks/form-price-modal/form-price-modal');
+
+require('../blocks/layout-default/layout-default');
+
+require('../blocks/product-more/product-more');
+
+});
+
+require.register("src/scripts/form-helper.ts", function(exports, require, module) {
+'use strict';
+var settings = require("src/data/site-settings.json");
+var sendToEmail = settings['email'] || 'info@foodtrade.bz';
+function initForm(formId, subject, success, fail) {
+    var form = document.getElementById(formId);
+    if (form === null) {
+        return false;
+    }
+    var serviceUrl = 'https://formspree.io/';
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var spinner;
+        if (form.getElementsByClassName('spinner').length == 0) {
+            spinner = document.createElement('div');
+            spinner.className = 'spinner';
+            form.appendChild(spinner);
+        }
+        else {
+            spinner = form.getElementsByClassName('spinner')[0];
+        }
+        var formData = new FormData(form);
+        formData.append('_subject', subject);
+        formData.append('url', window.location.href);
+        fetch("" + serviceUrl + sendToEmail, {
+            method: 'post',
+            mode: 'cors',
+            headers: {
+                'Accept': 'application/json'
+            },
+            body: formData
+        })
+            .then(function (response) {
+            if (response.ok) {
+                // console.log('Email send');
+                if (typeof (success) === 'function') {
+                    success(form);
+                }
+            }
+            else {
+                throw new Error("\u041E\u0448\u0438\u0431\u043A\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043A\u0438 \u043F\u043E\u0447\u0442\u044B: status=" + response.status + ", " + response.statusText);
+            }
+        })
+            .catch(function (error) {
+            // console.log(error);
+            if (typeof (fail) === 'function') {
+                fail(form, error);
+            }
+        });
+    });
+    return true;
+}
+exports.initForm = initForm;
+//# sourceMappingURL=form-helper.js.map
+
+});
+
+;require.register("src/scripts/getprice.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.getPrice = getPrice;
+function getPrice() {
+	var filePath = 'assets/images/price/';
+	var fileName = 'wholesale_price.pdf';
+	var srcFile = document.createElement('a');
+	srcFile.setAttribute('href', filePath + fileName);
+	srcFile.download = fileName;
+	srcFile.click();
+}
+
+});
+
+;require.register("src/scripts/inputmask.js", function(exports, require, module) {
+"use strict";
+
+/* ===========================================================
+ * Bootstrap: inputmask.js v3.1.0
+ * http://jasny.github.io/bootstrap/javascript/#inputmask
+ *
+ * Based on Masked Input plugin by Josh Bush (digitalbush.com)
+ * ===========================================================
+ * Copyright 2012-2014 Arnold Daniels
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License")
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================== */
+
++function ($) {
+  "use strict";
+
+  var isIphone = window.orientation !== undefined;
+  var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+  var isIE = window.navigator.appName == 'Microsoft Internet Explorer';
+
+  // INPUTMASK PUBLIC CLASS DEFINITION
+  // =================================
+
+  var Inputmask = function Inputmask(element, options) {
+    if (isAndroid) return; // No support because caret positioning doesn't work on Android
+
+    this.$element = $(element);
+    this.options = $.extend({}, Inputmask.DEFAULTS, options);
+    this.mask = String(this.options.mask);
+
+    this.init();
+    this.listen();
+
+    this.checkVal(); //Perform initial check for existing values
+  };
+
+  Inputmask.DEFAULTS = {
+    mask: "",
+    placeholder: "_",
+    definitions: {
+      '9': "[0-9]",
+      'a': "[A-Za-z]",
+      'w': "[A-Za-z0-9]",
+      'h': "[A-Fa-f0-9]",
+      '*': "."
+    }
+  };
+
+  Inputmask.prototype.init = function () {
+    var defs = this.options.definitions;
+    var len = this.mask.length;
+
+    this.tests = [];
+    this.partialPosition = this.mask.length;
+    this.firstNonMaskPos = null;
+
+    $.each(this.mask.split(""), $.proxy(function (i, c) {
+      if (c == '?') {
+        len--;
+        this.partialPosition = i;
+      } else if (defs[c]) {
+        this.tests.push(new RegExp(defs[c]));
+        if (this.firstNonMaskPos === null) this.firstNonMaskPos = this.tests.length - 1;
+      } else {
+        this.tests.push(null);
+      }
+    }, this));
+
+    this.buffer = $.map(this.mask.split(""), $.proxy(function (c, i) {
+      if (c != '?') return defs[c] ? this.options.placeholder : c;
+    }, this));
+
+    this.focusText = this.$element.val();
+
+    this.$element.data("rawMaskFn", $.proxy(function () {
+      return $.map(this.buffer, function (c, i) {
+        return this.tests[i] && c != this.options.placeholder ? c : null;
+      }).join('');
+    }, this));
+  };
+
+  Inputmask.prototype.listen = function () {
+    if (this.$element.attr("readonly")) return;
+
+    var pasteEventName = (isIE ? 'paste' : 'input') + ".bs.inputmask";
+
+    this.$element.on("unmask.bs.inputmask", $.proxy(this.unmask, this)).on("focus.bs.inputmask", $.proxy(this.focusEvent, this)).on("blur.bs.inputmask", $.proxy(this.blurEvent, this)).on("keydown.bs.inputmask", $.proxy(this.keydownEvent, this)).on("keypress.bs.inputmask", $.proxy(this.keypressEvent, this)).on(pasteEventName, $.proxy(this.pasteEvent, this));
+  };
+
+  //Helper Function for Caret positioning
+  Inputmask.prototype.caret = function (begin, end) {
+    if (this.$element.length === 0) return;
+    if (typeof begin == 'number') {
+      end = typeof end == 'number' ? end : begin;
+      return this.$element.each(function () {
+        if (this.setSelectionRange) {
+          this.setSelectionRange(begin, end);
+        } else if (this.createTextRange) {
+          var range = this.createTextRange();
+          range.collapse(true);
+          range.moveEnd('character', end);
+          range.moveStart('character', begin);
+          range.select();
+        }
+      });
+    } else {
+      if (this.$element[0].setSelectionRange) {
+        begin = this.$element[0].selectionStart;
+        end = this.$element[0].selectionEnd;
+      } else if (document.selection && document.selection.createRange) {
+        var range = document.selection.createRange();
+        begin = 0 - range.duplicate().moveStart('character', -100000);
+        end = begin + range.text.length;
+      }
+      return {
+        begin: begin,
+        end: end
+      };
+    }
+  };
+
+  Inputmask.prototype.seekNext = function (pos) {
+    var len = this.mask.length;
+    while (++pos <= len && !this.tests[pos]) {}
+
+    return pos;
+  };
+
+  Inputmask.prototype.seekPrev = function (pos) {
+    while (--pos >= 0 && !this.tests[pos]) {}
+
+    return pos;
+  };
+
+  Inputmask.prototype.shiftL = function (begin, end) {
+    var len = this.mask.length;
+
+    if (begin < 0) return;
+
+    for (var i = begin, j = this.seekNext(end); i < len; i++) {
+      if (this.tests[i]) {
+        if (j < len && this.tests[i].test(this.buffer[j])) {
+          this.buffer[i] = this.buffer[j];
+          this.buffer[j] = this.options.placeholder;
+        } else break;
+        j = this.seekNext(j);
+      }
+    }
+    this.writeBuffer();
+    this.caret(Math.max(this.firstNonMaskPos, begin));
+  };
+
+  Inputmask.prototype.shiftR = function (pos) {
+    var len = this.mask.length;
+
+    for (var i = pos, c = this.options.placeholder; i < len; i++) {
+      if (this.tests[i]) {
+        var j = this.seekNext(i);
+        var t = this.buffer[i];
+        this.buffer[i] = c;
+        if (j < len && this.tests[j].test(t)) c = t;else break;
+      }
+    }
+  }, Inputmask.prototype.unmask = function () {
+    this.$element.unbind(".bs.inputmask").removeData("bs.inputmask");
+  };
+
+  Inputmask.prototype.focusEvent = function () {
+    this.focusText = this.$element.val();
+    var len = this.mask.length;
+    var pos = this.checkVal();
+    this.writeBuffer();
+
+    var that = this;
+    var moveCaret = function moveCaret() {
+      if (pos == len) that.caret(0, pos);else that.caret(pos);
+    };
+
+    moveCaret();
+    setTimeout(moveCaret, 50);
+  };
+
+  Inputmask.prototype.blurEvent = function () {
+    this.checkVal();
+    if (this.$element.val() !== this.focusText) {
+      this.$element.trigger('change');
+      this.$element.trigger('input');
+    }
+  };
+
+  Inputmask.prototype.keydownEvent = function (e) {
+    var k = e.which;
+
+    //backspace, delete, and escape get special treatment
+    if (k == 8 || k == 46 || isIphone && k == 127) {
+      var pos = this.caret(),
+          begin = pos.begin,
+          end = pos.end;
+
+      if (end - begin === 0) {
+        begin = k != 46 ? this.seekPrev(begin) : end = this.seekNext(begin - 1);
+        end = k == 46 ? this.seekNext(end) : end;
+      }
+      this.clearBuffer(begin, end);
+      this.shiftL(begin, end - 1);
+
+      return false;
+    } else if (k == 27) {
+      //escape
+      this.$element.val(this.focusText);
+      this.caret(0, this.checkVal());
+      return false;
+    }
+  };
+
+  Inputmask.prototype.keypressEvent = function (e) {
+    var len = this.mask.length;
+
+    var k = e.which,
+        pos = this.caret();
+
+    if (e.ctrlKey || e.altKey || e.metaKey || k < 32) {
+      //Ignore
+      return true;
+    } else if (k) {
+      if (pos.end - pos.begin !== 0) {
+        this.clearBuffer(pos.begin, pos.end);
+        this.shiftL(pos.begin, pos.end - 1);
+      }
+
+      var p = this.seekNext(pos.begin - 1);
+      if (p < len) {
+        var c = String.fromCharCode(k);
+        if (this.tests[p].test(c)) {
+          this.shiftR(p);
+          this.buffer[p] = c;
+          this.writeBuffer();
+          var next = this.seekNext(p);
+          this.caret(next);
+        }
+      }
+      return false;
+    }
+  };
+
+  Inputmask.prototype.pasteEvent = function () {
+    var that = this;
+
+    setTimeout(function () {
+      that.caret(that.checkVal(true));
+    }, 0);
+  };
+
+  Inputmask.prototype.clearBuffer = function (start, end) {
+    var len = this.mask.length;
+
+    for (var i = start; i < end && i < len; i++) {
+      if (this.tests[i]) this.buffer[i] = this.options.placeholder;
+    }
+  };
+
+  Inputmask.prototype.writeBuffer = function () {
+    return this.$element.val(this.buffer.join('')).val();
+  };
+
+  Inputmask.prototype.checkVal = function (allow) {
+    var len = this.mask.length;
+    //try to place characters where they belong
+    var test = this.$element.val();
+    var lastMatch = -1;
+
+    for (var i = 0, pos = 0; i < len; i++) {
+      if (this.tests[i]) {
+        this.buffer[i] = this.options.placeholder;
+        while (pos++ < test.length) {
+          var c = test.charAt(pos - 1);
+          if (this.tests[i].test(c)) {
+            this.buffer[i] = c;
+            lastMatch = i;
+            break;
+          }
+        }
+        if (pos > test.length) break;
+      } else if (this.buffer[i] == test.charAt(pos) && i != this.partialPosition) {
+        pos++;
+        lastMatch = i;
+      }
+    }
+    if (!allow && lastMatch + 1 < this.partialPosition) {
+      this.$element.val("");
+      this.clearBuffer(0, len);
+    } else if (allow || lastMatch + 1 >= this.partialPosition) {
+      this.writeBuffer();
+      if (!allow) this.$element.val(this.$element.val().substring(0, lastMatch + 1));
+    }
+    return this.partialPosition ? i : this.firstNonMaskPos;
+  };
+
+  // INPUTMASK PLUGIN DEFINITION
+  // ===========================
+
+  var old = $.fn.inputmask;
+
+  $.fn.inputmask = function (options) {
+    return this.each(function () {
+      var $this = $(this);
+      var data = $this.data('bs.inputmask');
+
+      if (!data) $this.data('bs.inputmask', data = new Inputmask(this, options));
+    });
+  };
+
+  $.fn.inputmask.Constructor = Inputmask;
+
+  // INPUTMASK NO CONFLICT
+  // ====================
+
+  $.fn.inputmask.noConflict = function () {
+    $.fn.inputmask = old;
+    return this;
+  };
+
+  // INPUTMASK DATA-API
+  // ==================
+
+  $(document).on('focus.bs.inputmask.data-api', '[data-mask]', function (e) {
+    var $this = $(this);
+    if ($this.data('bs.inputmask')) return;
+    $this.inputmask($this.data());
+  });
+}(window.jQuery);
+
+});
+
+require.register("___globals___", function(exports, require, module) {
+  
+
+// Auto-loaded modules from config.npm.globals.
+window["$"] = require("jquery");
+window.jQuery = require("jquery");
+window.Popper = require("popper.js/dist/umd/popper");
+window.bootstrap = require("bootstrap");
+
+
+});})();require('___globals___');
+
+
+//# sourceMappingURL=app.js.map
