@@ -9,6 +9,7 @@
     <meta name="keywords" content="">
     <base href="/">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Critical CSS-->
     <link href="/assets/styles/vendors.css" rel="stylesheet">
     <link href="/assets/styles/app.css" rel="stylesheet">
   </head>
@@ -324,7 +325,7 @@
       </div>
       <script src="/assets/scripts/vendors.js" defer></script>
       <script src="/assets/scripts/app.js" defer></script>
-      <script>require('src/scripts/app.js');</script>
+      <script>window.onload = function() { require('src/scripts/app.js') };</script>
     </div>
   </body>
 </html>
