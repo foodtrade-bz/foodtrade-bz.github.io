@@ -1,0 +1,26 @@
+{
+  "name": "foodtrade-bz.github.io",
+  "version": "1.0.0",
+  "description": "Сайт компании foodtrade",
+  "main": "index.js",
+  "scripts": {
+    "update-price": "babel-node update-price.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foodtrade-bz/foodtrade-bz.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foodtrade-bz/foodtrade-bz.github.io/issues"
+  },
+  "homepage": "https://github.com/foodtrade-bz/foodtrade-bz.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cheerio": "^1.0.0-rc.2",
+    "node-xlsx": "^0.11.2"
+  }
+}
